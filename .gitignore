@@ -1,0 +1,18 @@
+# ignore everything
+####################################
+
+/**
+
+
+# except
+####################################
+
+# this file
+!.gitignore
+
+# emacs init
+!init.el
+
+# custom themes folder contents
+!/themes/
+!/themes/**
