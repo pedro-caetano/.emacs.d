@@ -3,15 +3,18 @@
 
 /**
 
-
 # except
 ####################################
 
 # this file
 !.gitignore
 
-# emacs init
+# emacs init file
 !init.el
+
+# this 'custom' file to prevent emacs from auto-generating code in init.el
+# for "package-selected-packages"
+!package-selected-packages.el
 
 # custom themes folder contents
 !/themes/
