@@ -77,9 +77,14 @@
 
 ;; cquery
 (setq cquery-executable "~/dev/cquery/build/cquery")
-(setq cquery-extra-init-params '(:index (:comments 2) :cacheFormat "msgpack" :completion (:detailedLabel t)))
+(setq cquery-extra-init-params 
+    '(:index (:comments 2) 
+      :cacheFormat "msgpack" 
+      :completion (:detailedLabel t)))
 
+(add-hook 'c-mode-common-hook 'lsp-cquery-enable)
 ;;(setq cquery-extra-init-params '(:extraClangArguments ("--driver-mode=cl"))
+
 
 ;; my prefered (controversial?!) key remap
 (bind-keys*
