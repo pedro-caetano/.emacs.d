@@ -4,9 +4,11 @@
 ;;; my default preferences -------------------------------
 
 (tool-bar-mode -1)
+
 (blink-cursor-mode -1)
+
 (add-to-list 'default-frame-alist 
-    '(fullscreen . maximized))
+   '(fullscreen . maximized))
 
 (setq-default indent-tabs-mode nil)
 
@@ -18,7 +20,6 @@
 ;; stop creating backup '~*.*' files
 (setq make-backup-files nil) 
 
-;; font
 (set-frame-font "DejaVu Sans Mono-14" nil t)
 
 
@@ -26,15 +27,31 @@
 
 (require 'package)
 
-;; add melpa address
 (add-to-list 'package-archives
     '("melpa" . "https://melpa.org/packages/") t)
 
 (package-initialize)
-(eval-when-compile
-    (require 'use-package))
+
+(setq my-required-packages-list 
+    '( use-package 
+        diminish 
+        undo-tree
+	iedit
+        lsp-ui
+        company
+        company-quickhelp
+        company-lsp
+        cquery
+        bind-key))
+
+(mapc #'package-install my-required-packages-list)
+
+(mapc #'require my-required-packages-list)
 
 ;;; theme -----------------------------------------------
+
+;;(eval-when-compile
+;;    (require 'use-package))
 
 (use-package darkokai-theme
   :ensure t
