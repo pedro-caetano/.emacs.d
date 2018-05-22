@@ -22,6 +22,10 @@
 
 (set-frame-font "DejaVu Sans Mono-14" nil t)
 
+;;; hooks for all programming modes -------------------------
+
+(add-hook 'prog-mode-hook #'hs-minor-mode) ; hide/show hs-minor-mode mode
+(add-hook 'prog-mode-hook #'linum-mode) ; linum mode (show line numbers)
 
 ;;; init for non 'built-in' packages ------------------------
 
@@ -85,11 +89,6 @@
 (add-hook 'c-mode-common-hook 'lsp-cquery-enable)
 ;;(setq cquery-extra-init-params '(:extraClangArguments ("--driver-mode=cl"))
 
-;; hs-minor-mode enabled for all programming modes
-(add-hook 'prog-mode-hook #'hs-minor-mode)
-
-;; linum mode enabled (show line numbers) for all programming modes
-(add-hook 'prog-mode-hook #'linum-mode)
 
 ;; my prefered (controversial?!) key remap
 (bind-keys*
