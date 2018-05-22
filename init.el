@@ -88,6 +88,8 @@
 ;; hs-minor-mode enabled for all programming modes
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
+;; linum mode enabled (show line numbers) for all programming modes
+(add-hook 'prog-mode-hook #'linum-mode)
 
 ;; my prefered (controversial?!) key remap
 (bind-keys*
