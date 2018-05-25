@@ -41,6 +41,7 @@
         diminish
         undo-tree
 	iedit
+	neotree
         lsp-ui
         company
         company-quickhelp
@@ -66,6 +67,8 @@
 (global-undo-tree-mode 1)
 
 ;; iedit
+
+;; neotree
 
 ;; lsp-ui
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
@@ -97,6 +100,8 @@
     ("C-s" . save-buffer)       ; Save file
     ("C-S-s" . write-file)      ; Save as
     ("M-Q" . kill-this-buffer)  ; close file
+    ;; folder tree
+    ("C-d" . neotree-toggle)  ; toggle hide/show folder tree
     ;; buffer content operations
     ("C-a" . mark-whole-buffer) ; Select all
     ("C-f" . search-forward)    ; find in file
