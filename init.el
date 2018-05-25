@@ -104,7 +104,8 @@
     ("C-d" . neotree-toggle)  ; toggle hide/show folder tree
     ;; buffer content operations
     ("C-a" . mark-whole-buffer) ; Select all
-    ("C-f" . search-forward)    ; find in file
+    ("C-f" . highlight-phrase)    ; find in file and highlight
+    ("C-S-f" . unhighlight-regexp) ; exit highlight mode
     ("C-z" . undo-tree-undo)    ; undo
     ("C-S-z" . undo-tree-redo)  ; redo
     ("C-c" . kill-ring-save)    ; Copy
