@@ -1,5 +1,8 @@
 ;;;; emacs configuration file
 
+(when (version< emacs-version "25.0") (package-initialize))
+
+
 ;;; my default preferences -------------------------------
 
 (tool-bar-mode -1)
@@ -34,14 +37,14 @@
 (add-to-list 'package-archives
     '("melpa" . "https://melpa.org/packages/") t)
 
-(package-initialize)
+(when (version< emacs-version "27.0") (package-initialize))
 
 (setq my-required-packages-list
     '( use-package
         diminish
         undo-tree
-	iedit
-	neotree
+        iedit
+        neotree
         lsp-ui
         company
         company-quickhelp
