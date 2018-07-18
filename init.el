@@ -56,6 +56,9 @@
 
 (mapc #'require my-required-packages-list)
 
+;set buffer refresh from disk (auto-revert)
+(global-auto-revert-mode t)
+
 ;;; theme -----------------------------------------------
 
 (use-package darkokai-theme
