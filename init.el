@@ -128,6 +128,8 @@
     ("M-3" . next-buffer)       ; next file in pane
     ("<M-down>" . split-window-vertically)
     ("<M-right>" . split-window-horizontally)
+    ("M--" . shrink-window-horizontally)
+    ("M-+" . enlarge-window-horizontally)
     ("M-q" . delete-window)     ; close window
     ;; font size
     ("C-+" . text-scale-increase)
