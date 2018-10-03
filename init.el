@@ -25,6 +25,11 @@
 
 (set-frame-font "DejaVu Sans Mono-14" nil t)
 
+;set frame title to show filepath of current buffer
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
 ;;; hooks for all programming modes -------------------------
 
 (add-hook 'prog-mode-hook #'hs-minor-mode) ; hide/show hs-minor-mode mode
