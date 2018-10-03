@@ -6,7 +6,6 @@
 ;;; my default preferences -------------------------------
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-
 (blink-cursor-mode -1)
 
 (add-to-list 'default-frame-alist
@@ -128,8 +127,10 @@
     ("M-3" . next-buffer)       ; next file in pane
     ("<M-down>" . split-window-vertically)
     ("<M-right>" . split-window-horizontally)
-    ("M--" . shrink-window-horizontally)
-    ("M-+" . enlarge-window-horizontally)
+    ("<s-up>" . shrink-window)
+    ("<s-down>" . enlarge-window)
+    ("<s-left>" . shrink-window-horizontally)
+    ("<s-right>" . enlarge-window-horizontally)
     ("M-q" . delete-window)     ; close window
     ;; font size
     ("C-+" . text-scale-increase)
